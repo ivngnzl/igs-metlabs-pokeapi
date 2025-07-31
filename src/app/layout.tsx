@@ -25,12 +25,13 @@ export default function RootLayout({
           />
         </div>
 
-        <nav className="flex gap-x-4 items-center justify-center p-4 scale-75 md:scale-100">
+        <nav className="flex gap-x-4 items-center justify-center p-4">
           <Image
             src="/metlabs-logo.webp"
             alt="Metlabs Logo"
             width={180}
             height={38}
+            className="w-32 h-auto object-contain"
             priority
           />
           x
@@ -39,11 +40,14 @@ export default function RootLayout({
             alt="PokeAPI Logo"
             width={180}
             height={38}
+            className="w-32 h-auto object-contain"
             priority
           />
         </nav>
 
-        {children}
+        <main className="flex flex-col items-center justify-center p-4">
+          {children}
+        </main>
       </body>
     </html>
   )
