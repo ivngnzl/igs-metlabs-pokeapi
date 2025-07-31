@@ -2,6 +2,7 @@ import Aurora from '@/components/ui/Aurora'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import './globals.css'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Metlabs x Iván Gonzalez x PokeAPI',
@@ -25,7 +26,7 @@ export default function RootLayout({
           />
         </div>
 
-        <nav className="flex gap-x-4 items-center justify-center p-4">
+        <nav className="fixed top-0 left-0 right-0  backdrop-blur-md flex gap-x-4 items-center justify-center p-4">
           <Image
             src="/metlabs-logo.webp"
             alt="Metlabs Logo"
@@ -45,9 +46,30 @@ export default function RootLayout({
           />
         </nav>
 
-        <main className="flex flex-col items-center justify-center p-4">
+        <main className="flex flex-col items-center justify-center p-4 mt-16 mb-10">
           {children}
         </main>
+
+        <footer className="fixed bottom-0 left-0 right-0 backdrop-blur-md text-center py-4 text-neutral-400 hover:text-neutral-100">
+          <div className="text-sm">
+            <Link
+              href="https://ivangonzalez.pages.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex justify-center items-center gap-x-2"
+            >
+              <Image
+                src="/github.svg"
+                alt="Github Logo"
+                width={50}
+                height={50}
+                className="w-8 h-8 object-contain"
+                priority
+              />
+              ivngnzl
+            </Link>
+          </div>
+        </footer>
       </body>
     </html>
   )

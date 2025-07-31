@@ -1,4 +1,5 @@
 import { Pokemon } from '@/interfaces/pokemon'
+import { ArrowLeft } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -9,15 +10,19 @@ type Props = {
 export default function PokemonDetail({ pokemon }: Props) {
   return (
     <div className=" rounded-xl shadow-md p-6 max-w-xl mx-auto">
-      <Link href="/" className="mb-4 block underline text-center">
-        Volver
+      <Link
+        href="/"
+        className="mb-4 flex justify-center items-center gap-x-2 hover:underline text-center"
+      >
+        <ArrowLeft /> Volver
       </Link>
       <Image
         src={pokemon.sprites.other.dream_world.front_default}
         alt={pokemon.name}
         width={200}
         height={200}
-        className="mx-auto mb-4 w-48 h-48 object-contain rounded-full shadow-lg"
+        className="mx-auto mb-4 w-48 h-48 object-contain shadow-lg"
+        priority
       />
       <h2 className="text-2xl font-bold text-center capitalize mb-4">
         {pokemon.name}
