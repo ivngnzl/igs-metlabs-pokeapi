@@ -26,7 +26,7 @@ export default function RootLayout({
           />
         </div>
 
-        <nav className="fixed top-0 left-0 right-0  backdrop-blur-md flex gap-x-4 items-center justify-center p-4">
+        <nav className="fixed top-0 left-0 right-0  backdrop-blur-md flex gap-x-4 items-center justify-center p-4 z-10">
           <Image
             src="/metlabs-logo.webp"
             alt="Metlabs Logo"

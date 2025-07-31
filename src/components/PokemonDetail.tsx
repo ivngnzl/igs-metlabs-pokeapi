@@ -9,10 +9,10 @@ type Props = {
 
 export default function PokemonDetail({ pokemon }: Props) {
   return (
-    <div className=" rounded-xl shadow-md p-6 max-w-xl mx-auto">
+    <div className=" rounded-xl p-6 max-w-xl mx-auto">
       <Link
         href="/"
-        className="mb-4 flex justify-center items-center gap-x-2 hover:underline text-center"
+        className="mb-12 flex justify-center items-center gap-x-2 hover:underline text-center"
       >
         <ArrowLeft /> Volver
       </Link>
@@ -21,10 +21,10 @@ export default function PokemonDetail({ pokemon }: Props) {
         alt={pokemon.name}
         width={200}
         height={200}
-        className="mx-auto mb-4 w-48 h-48 object-contain shadow-lg"
+        className="mx-auto mb-4 w-48 h-48 object-contain"
         priority
       />
-      <h2 className="text-2xl font-bold text-center capitalize mb-4">
+      <h2 className="text-2xl font-semibold text-center capitalize mb-4 antialiased tracking-widest">
         {pokemon.name}
       </h2>
       <table className="w-full text-left border-collapse mx-4">
@@ -37,15 +37,15 @@ export default function PokemonDetail({ pokemon }: Props) {
         <tbody>
           <tr className="border-b">
             <td className="py-2">Altura</td>
-            <td className="py-2">{pokemon.height}</td>
+            <td className="py-2">{pokemon.height / 10} m</td>
           </tr>
           <tr className="border-b">
             <td className="py-2">Peso</td>
-            <td className="py-2">{pokemon.weight}</td>
+            <td className="py-2">{pokemon.weight / 10} kg</td>
           </tr>
           <tr>
-            <td className="py-2">Experiencia Base</td>
-            <td className="py-2">{pokemon.base_experience}</td>
+            <td className="py-2">Exp. Base</td>
+            <td className="py-2">{pokemon.base_experience} uds</td>
           </tr>
         </tbody>
       </table>

@@ -30,7 +30,7 @@ export default async function PokemonPage({
           alt="Pikachu"
           width={200}
           height={200}
-          className="mx-auto mt-4 rounded-2xl aspect-square object-cover shadow-lg"
+          className="mx-auto mt-4 rounded-2xl aspect-square object-cover"
           priority
         />
         <Link

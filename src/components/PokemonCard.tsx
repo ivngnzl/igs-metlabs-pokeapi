@@ -11,7 +11,7 @@ type Props = {
 
 export default function PokemonCard({ pokemon }: Props) {
   return (
-    <div className="rounded-xl shadow-md p-4 text-center hover:scale-105 transition cursor-default border border-white/10 hover:border-white/30">
+    <div className="rounded-xl p-4 text-center hover:scale-105 transition cursor-default border border-white/10 hover:border-white/30">
       <Image
         src={pokemon.sprites.other.dream_world.front_default}
         alt={pokemon.name}
