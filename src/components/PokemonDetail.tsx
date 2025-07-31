@@ -1,7 +1,6 @@
 import { Pokemon } from '@/interfaces/pokemon'
-import { ArrowLeft } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Backbutton } from './ui/Backbutton'
 
 type Props = {
   pokemon: Pokemon
@@ -10,12 +9,7 @@ type Props = {
 export default function PokemonDetail({ pokemon }: Props) {
   return (
     <div className=" rounded-xl p-6 max-w-xl mx-auto">
-      <Link
-        href="/"
-        className="mb-12 flex justify-center items-center gap-x-2 hover:underline text-center"
-      >
-        <ArrowLeft /> Volver
-      </Link>
+      <Backbutton />
       <Image
         src={pokemon.sprites.other.dream_world.front_default}
         alt={pokemon.name}

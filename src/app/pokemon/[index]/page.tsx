@@ -1,8 +1,8 @@
-import { getPokemon } from '@/lib/pokeapi'
 import PokemonDetail from '@/components/PokemonDetail'
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
+import { Backbutton } from '@/components/ui/Backbutton'
+import { getPokemon } from '@/lib/pokeapi'
 import Image from 'next/image'
+import { notFound } from 'next/navigation'
 
 export async function generateStaticParams() {
   return Array.from({ length: 9 }, (_, i) => ({
@@ -30,15 +30,10 @@ export default async function PokemonPage({
           alt="Pikachu"
           width={200}
           height={200}
-          className="mx-auto mt-4 rounded-2xl aspect-square object-cover"
+          className="mx-auto mt-4 mb-10 translate-x-4 rounded-2xl aspect-square object-cover"
           priority
         />
-        <Link
-          href={'/'}
-          className="mt-4 block text-gray-100 underline text-center"
-        >
-          Volver
-        </Link>
+        <Backbutton />
       </>
     )
   }
